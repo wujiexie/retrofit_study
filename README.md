@@ -9,7 +9,7 @@ retrofit中是对okHttp的包装，采用了许多设计模式，笔者主要叙
    当然还有诸如外观模式、建造者模式、工厂模式等就不详述了
 
 
-<center style="color:black;font-size:120%">动态代理模式模式</center>
+<p align="center" style="color:black;font-size:120%">动态代理模式模式</p>
 
 ```java
     Retrofit.Builder()
@@ -57,7 +57,7 @@ public <T> T create(final Class<T> service) {
 ~~~
 retrofit并没有采用代码生成技术生成实现开发者自定义service接口的类，而是采用**动态代理**技术，代理了接口方法调用的真实操作
 
-<center style="color:black;font-size:120%">适配器模式</center>
+<p align="center" style="color:black;font-size:120%">适配器模式</p>
 
 看一下serviceMethod类
 
@@ -99,7 +99,7 @@ ServiceMethod<Object, Object> serviceMethod =
 ~~~
 
 在构造出serviceMethod后，最后的真实代理交给了callAdapter（适配器）处理，在实际开发中，retrofit经常会和Rxjava、Gson一起使用，Retrofit采用的方式就是通过为Retrofit添加一个Rxjava的适配器，对请求Retrofit的call请求重新包装，在方法调用的时返回我们需要的类型，比如Observable、Flowable，而和Gson的配合使用也是通过在retrofit中添加一个适配器，把返回的数据转换成json
-<center style="color:black;font-size:120%">享元模式</center>
+<p align="center" style="color:black;font-size:120%">享元模式</p>
 
 进入loadServiceMethod
 
@@ -489,7 +489,7 @@ parameterHandlers[p] = parseParameter(p, parameterType, parameterAnnotations);
 
 3. 把任务交给ParamterHandler的子类
 
-<center style="color=black;font-size:120%">小结</center>
+<p align="center" style="color=black;font-size:120%">小结</p>
 最后还是贴张图
 <image src="https://github.com/wujiexie/retrofit_study/blob/master/image/Retrofit.png"></iamge>
 
