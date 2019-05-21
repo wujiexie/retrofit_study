@@ -127,7 +127,7 @@ ServiceMethod<Object, Object> serviceMethod =
 
 简单的时序图
 
-![](image\Retrofit.png)
+<image src="https://github.com/wujiexie/retrofit_study/blob/master/image/Retrofit.png"></iamge>
 
 ServiceMethod的是通过ServiceMethod.Builder构建的，进入Builder构造函数
 
@@ -491,10 +491,5 @@ parameterHandlers[p] = parseParameter(p, parameterType, parameterAnnotations);
 
 <center style="color=black;font-size:120%">小结</center>
 最后还是贴张图
-![](image\Retrofit.png)
-
-
-
-<p align="right" style="color:black"> 不正当之处请见谅</p>
-
+<image src="https://github.com/wujiexie/retrofit_study/blob/master/image/Retrofit.png"></iamge>
 
